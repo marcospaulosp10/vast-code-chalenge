@@ -1,5 +1,9 @@
 # Typing Speed Test
 
+I used the best of resouces of laravel and Vue.
+I have implemented some anti-cheat.
+I used tailwind for the styles.
+
 ## Setup Instructions
 
 ### Requirements
