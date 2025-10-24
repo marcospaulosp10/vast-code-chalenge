@@ -4,6 +4,20 @@ I used the best of resouces of laravel and Vue.
 I have implemented some anti-cheat.
 I used tailwind for the styles.
 
+## Architecture Used
+The architecture follows a Service + Controller + Resource pattern for separation of concerns:
+Service → business logic (ranking, validation, persistence)
+Controller → request/response orchestration
+Resource → consistent API serialization.
+Frontend: Vue 3 (Composition API) with Vite and Pinia ensures reactive state management.
+The leaderboard auto-refresh uses a shared Pinia flag instead of sockets simpler, reliable, and sufficient for demo scale.
+Validation: Centralized via FormRequest, allowing clean server-side rules and reducing coupling.
+The name field is optional to simplify UX, defaulting to “Anonymous”.
+
+### Trade-offs:
+No authentication layer (kept anonymous for simplicity).
+API and frontend hosted separately, so CORS must be enabled in production.
+
 ## Setup Instructions
 
 ### Requirements
